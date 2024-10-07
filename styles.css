@@ -1,0 +1,348 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333; /* Texto en color negro suave */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+header {
+    background-color: #629c59;
+    box-shadow: 0 2px 4px rgba(0,0,0,2);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logomark {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 26px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    font-style: normal;
+    text-decoration: underline;
+    color: #ffffff;
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .logo {
+      margin-bottom: 15px;
+    }
+  
+    nav {
+      width: 100%;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    nav ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    nav ul li:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+/* Banner */
+.banner {
+    background-color: #4c7a4c; /* Verde oscuro */
+    color: white;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0.1, 0, 0, 0.4);
+    padding: 60px 20px;
+}
+
+.banner h2 {
+    color: #f4f4f4;
+    font-size: 65px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 28px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.MARKBANNER {
+    width: 200PX;
+    padding-left: 12px;
+}
+
+/*PRODUCTOS*/
+
+.products {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .product {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(50% - 15px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product img {
+    width: 400px; /* Set a fixed width */
+    height: 400px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+  
+  .product h3 {
+    font-size: 1.2rem;
+    color: #333;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .price {
+    font-size: 1.4rem;
+    color: #4CAF50;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .quantity-controls button {
+    background-color: #f0f0f0;
+    border: none;
+    color: #333;
+    font-size: 1.2rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quantity-controls button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .quantity {
+    font-size: 1rem;
+    margin: 0 10px;
+  }
+  
+  .add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #45a049;
+  }
+  
+  @media (max-width: 768px) {
+    .product {
+      width: 100%;
+    }
+    
+    .product img {
+      width: 150px; /* Slightly smaller on mobile */
+      height: 150px;
+    }
+  }
+
+/* Footer */
+footer {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 2);
+    background-color: #1a1919; /* Negro */
+    color: white;
+    text-align: center;
+}
+
+.footerabajo{
+    padding: 20px;
+}
+
+.imgfooter {
+    padding: 15px;
+    width: 200px;
+}
+
+.footerbackground{
+    background-color: #c0b380;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li {
+    margin: 0;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.increase,
+.decrease {
+    border-radius: 50%; /* Bordes redondeados */
+    background-color: #2e5c3e; /* Color de fondo (puedes ajustarlo) */
+    width: 50px; /* Ancho fijo */
+    height: 50px; /* Alto fijo */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.quantity {
+    font-size: 25px;
+
+}
+
+@media (max-width: 600px) {
+    .increase,
+    .decrease {
+        width: 30px; /* Reducimos el tamaño en pantallas pequeñas */
+        height: 30px; /* Reducimos el tamaño en pantallas pequeñas */
+        font-size: 16px; /* Reducimos el tamaño de fuente */
+    }
+
+    .quantity {
+        font-size: 20px; /* Reducimos el tamaño de fuente */
+    }
+}
+
+.cart-info {
+    background-color: #4c7a4c; /* Verde oscuro */
+    color: white; /* Texto blanco */
+    padding: 15px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+    margin: 20px 0; /* Espaciado superior e inferior */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    font-size: 28px; /* Tamaño de fuente */
+}
+
+.cart-info p {
+    margin: 0; /* Quitar margen del párrafo */
+}
+
+.cart-info span {
+    font-weight: bold; /* Hacer el número del carrito más audaz */
+    font-size: 40px; /* Tamaño de fuente más grande para la cantidad */
+    color: #dacb92; /* Color amarillo para destacar la cantidad */
+}
+
+
+.igthomee{ 
+        font-style:normal;
+        text-decoration: none;
+        color: #ffffff;
+}
+
+.igthomee:hover {
+    font-style: normal;
+    text-decoration: underline;
+    color: #d6d6d6;
+  }
